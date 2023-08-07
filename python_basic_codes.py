@@ -261,3 +261,46 @@ calculatePrice(1000) # output: 1100
 #age = input("Your age:") # by default the data type is string
 # ---------------------------------------------- #
 
+numbers = [5,4,9,0,7,8,2]
+
+def calculateList(numbers):
+    total = 0
+    for numb in numbers:
+        total += numb
+    
+    print('total sum of list:', total)
+
+    activeNumb = 5
+    indexOfValFive = -1
+    indexOfValFour = -1
+
+    while(activeNumb <= 100):
+        availableIndex = -1
+        try:
+            availableIndex = numbers.index(activeNumb)
+        except:
+            availableIndex = -1
+        
+        if availableIndex == -1:
+            activeNumb+=1
+            continue
+
+        if numbers[availableIndex] == 4:
+            indexOfValFour = availableIndex
+        elif numbers[availableIndex] == 5:
+            indexOfValFive = availableIndex
+
+        activeNumb+=1
+    
+    if indexOfValFive != -1:
+        print('Number 5 is exist on list index:', indexOfValFive)
+    else:
+        print('there is no number 5 is exist on the list')
+    
+    calcIndexVal = numbers[indexOfValFour] *  numbers[indexOfValFive]
+
+    print('Calculation of ', numbers[indexOfValFour], '*', numbers[indexOfValFive], 'is', calcIndexVal)
+
+
+calculateList(numbers)
+
