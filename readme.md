@@ -37,3 +37,7 @@ Function:
 ```
 Without Params, With Params, With Default Params
 ```
+
+pip install matplotlib
+-- Visualisation: line, bar, pie, histogram, scatter plott
+pip install seaborn
