@@ -1,0 +1,11 @@
+tags:
+  - name: Hello World
+get:
+  description: Get Hello World data
+responses:
+  200:
+    description: Success
+  400:
+    description: Bad Request
+  500:
+    description: Internal Server Error
