@@ -44,6 +44,13 @@ def hello_world():
     return response_data
 
 
+@app.route('/my', methods=['GET'])
+def hello_my_name():
+    name = request.args.get("name")
+
+    return "Hello, My Name is " + name
+
+
 @swag_from('docs/text.yml', methods=['GET'])
 @app.route('/text', methods=['GET'])
 def text():
